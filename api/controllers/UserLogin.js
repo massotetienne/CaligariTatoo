@@ -35,5 +35,13 @@ module.exports ={
     })
     
     
- } 
+ },
+ logout: (req, res) => {
+    
+    req.session.destroy(() => {
+      res.clearCookie('cookie-sess')
+      console.log(req.session)
+      res.redirect('/')
+    })
+} 
 } 

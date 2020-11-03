@@ -14,7 +14,8 @@ const homeController = require('./controllers/homeController'),
     logController = require('./controllers/logController'),
     adminController = require('./controllers/adminController'),
     UserCreateController = require('./controllers/UserCreateController'),
-    UserLogin = require ('./controllers/UserLogin')
+    UserLogin = require ('./controllers/UserLogin'),
+    Carroussel = require ('./controllers/Carroussel')
     // UserAuthSucess = require ('../middleware/UserAuthSucess')
 // ==========================================================
 // ======Middleware=====
@@ -35,14 +36,16 @@ router.route("/user/LoginGet")
 router.route("/user/LoginPost")
     .post(UserLogin.post)
 
-
+router.route("/user/Logout")
+    .get(UserLogin.logout)
 
 // ==============================================
 
 //==== Actus ====
 const upload = require('./config/multer')
-const { get } = require('http')
-const { post } = require('./controllers/tarifController')
+const uploadCarroussel = require('./config/multerCarrousel')
+
+
 
 
 // method get
@@ -102,6 +105,20 @@ router.route("/croquis/update/:id")
     .post(upload.single('image'), tarifController.update)
 
 // =====================================================
+
+//===== Carroussel =====
+
+router.route("/carroussel/get")
+    .get(Carroussel.get)
+router.route("/carroussel/post")
+    .post(uploadCarroussel.array('imageCarroussel'),Carroussel.post)
+// router.route("/croquis/delete/:id")
+//     .get(tarifController.deleteOne)
+// router.route("/croquis/update/:id")
+//     .post(upload.single('image'), tarifController.update)
+
+// =====================================================
+
 // Home
 
 router.route('/')

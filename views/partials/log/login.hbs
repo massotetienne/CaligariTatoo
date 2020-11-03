@@ -24,7 +24,7 @@
                             E-mail
                         </label>
                         <div class="col-md-6">
-                            <input class="form-control" name="email" type="email" value={{email}} >
+                            <input class="form-control" name="email" type="email" value={{email}}>
                         </div>
                         <div class="col-md-3 form-control-comment">
                         </div>
@@ -35,9 +35,8 @@
                         </label>
                         <div class="col-md-6">
                             <div class="input-group js-parent-focus">
-                                <input class="form-control" name="password"
-                                    type="password" value={{password}} >
-                              
+                                <input class="form-control" name="password" type="password" value={{password}}>
+
                             </div>
                         </div>
                         <div class="col-md-3 form-control-comment">
@@ -56,6 +55,11 @@
                         Connexion
                     </button>
                 </footer>
+            </form>
+            <form action="/user/Logout" method="get">
+                <button class="btn bg-gold black mb-3 p-2 pl-5 pr-5 " type="submit">
+                    Deconnextion
+                </button>
             </form>
         </section>
         <hr>
