@@ -45,12 +45,12 @@
                                 <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
                                     data-target="#modalUpdCarroussel{{_id}}">Edit</button>
                                 <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
-                                    data-target="#ConfirmModal{{_id}}">supprimer</button>
+                                    data-target="#modalConfirmCarroussel{{_id}}">supprimer</button>
                             </td>
                         </tr>
 
                         {{!-- Appel du modal avec ID dynamique de l'objectdans la boucle --}}
-                        {{> admin/CrudCarroussel/modalCarroussel }}
+                        {{> admin/CrudCarroussel/modalUpdCarroussel }}
 
                         {{/each }}
                         {{/each}}
