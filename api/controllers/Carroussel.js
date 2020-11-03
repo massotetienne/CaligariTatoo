@@ -43,5 +43,7 @@ module.exports = {
             if (err) console.log(err)
             res.redirect('/admin')
         })
+         
     }
+    
 }
