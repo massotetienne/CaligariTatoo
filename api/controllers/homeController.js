@@ -7,7 +7,7 @@ module.exports = {
     
     get: async (req, res) => {
         const actus = await Article.find({})
-        const carroussel = await Carroussel.findOne({title: 'home'})
+        const carroussel = await Carroussel.find({})
 
 
         console.log('Home Page')

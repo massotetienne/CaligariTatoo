@@ -3,6 +3,8 @@ const express = require('express'),
     router = express.Router(),
     path = require('path')
 
+    uploadAcceuil = require('./config/multerAcceuil')
+
 // Controller
 const homeController = require('./controllers/homeController'),
     actusController = require('./controllers/actusController'),
@@ -44,6 +46,7 @@ router.route("/user/Logout")
 //==== Actus ====
 const upload = require('./config/multer')
 const uploadCarroussel = require('./config/multerCarrousel')
+const TestCarousel = require('./controllers/TestCarousel')
 
 
 
@@ -111,11 +114,11 @@ router.route("/croquis/update/:id")
 router.route("/carroussel/get")
     .get(Carroussel.get)
 router.route("/carroussel/post")
-    .post(uploadCarroussel.array('imageCarroussel'),Carroussel.post)
+    .post(uploadAcceuil.array('imageCarroussel', 6),TestCarousel.postArrayAcceuil)
 router.route("/carroussel/delete/:id")
     .get(Carroussel.deleteOne)
-// router.route("/croquis/update/:id")
-//     .post(upload.single('image'), tarifController.update)
+router.route("/carroussel/update/:id")
+    .put(uploadAcceuil.array('imageCarroussel', 6), TestCarousel.putArrayAcceuil)
 
 // =====================================================
 
