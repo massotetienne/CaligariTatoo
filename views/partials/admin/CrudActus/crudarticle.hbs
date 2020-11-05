@@ -34,6 +34,7 @@
                                     <i class="fas fa-plus ft-25 " data-toggle="tooltip" data-placement="bottom"
                                         title="Ajouter/Crée"></i>
                                 </a>
+                                {{> admin/CrudActus/modalStatic}}
                             </th>
                         </tr>
                     </thead>
@@ -45,16 +46,19 @@
                             <td>{{title }}</td>
                             <td>Posté</td>
                             <td class="text-right">
-                                <button type="button" class="btn bg-gold btn-sm m-0 py-1 m-2">Preview</button>
+                                <button type="button" class="btn bg-gold btn-sm m-0 py-1 m-2" data-toggle="modal"
+                                    data-target="#viewActus{{_id}}"> Preview</button>
                                 <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
                                     data-target="#modal{{_id}}">Edit</button>
                                 <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
                                     data-target="#ConfirmModal{{_id}}">supprimer</button>
                             </td>
                         </tr>
-
-                        {{!-- Appel du modal avec ID dynamique de l'objectdans la boucle --}}
+                        {{> admin/CrudActus/viewActus}}
                         {{> admin/CrudActus/modal }}
+                        
+                        {{!-- Appel du modal avec ID dynamique de l'objectdans la boucle --}}
+                       
 
                         {{/each}}
                     </tbody>

@@ -37,7 +37,7 @@ module.exports={
         console.log(event)
 
 
-        fs.unlink('./public/' + event.image, (err) => {
+        fs.unlink('./public' + event.image, (err) => {
             if (err) console.log(err)
             console.log('Mon Image est supprimer !')
             // Method DeleteOne

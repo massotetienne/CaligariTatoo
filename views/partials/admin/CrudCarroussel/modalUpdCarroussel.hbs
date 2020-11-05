@@ -10,15 +10,16 @@
         </button>
       </div>
 
-      <form action="/carroussel/update" method="post" enctype="multipart/form-data">
-       
+      <form action="/carroussel/edit/{{_id}}?_method=PUT" method="post" enctype="multipart/form-data">
+
         {{!-- image selecteur --}}
         <div class="file">
           <label class="file-label">
             <img style="width:150px;height:150px" src="{{image}}" alt="">
             <img style="width:150px;height:150px" src="{{image}}" alt="">
             <img style="width:150px;height:150px" src="{{image}}" alt="">
-            <input class="file-input" type="file" name="image">
+            <input type='hidden' name='addFirstImg' value='addFirstImg'>
+            <input class="file-input" type="file" name="image" multiple required>
             <span class="file-cta">
               <span class="file-icon">
                 <i class="fas fa-upload"></i>
@@ -57,36 +58,3 @@
 <!-- Modal -->
 
 <!--  ===================================================================  -->
-
-
-<!-- Central Modal Small -->
-<div class="modal fade" id="modalConfirmCarroussel{{_id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
-
-  <!-- Change class .modal-sm to change the size of the modal -->
-  <div class="modal-dialog modal-sm" role="document">
-
-
-    <div class="modal-content">
-      <div class="modal-header bg-gold">
-        <h4 class="modal-title w-100" id="myModalLabel">Modal title</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body bg-black honey">
-        Voulez vous vraiment supprimer ? <br>
-        {{_id}}
-      </div>
-
-      <form action="/carroussel/delete/{{_id}}" method="get">
-        <div class="modal-footer bg-gold">
-          <button type="submit" class="btn bg-black honey btn-sm">YES</button>
-          <button type="submit" class="btn bg-black honey btn-sm" data-dismiss="modal">NO</button>
-        </div>
-      </form>
-
-    </div>
-  </div>
-</div>
-<!-- Central Modal Small -->

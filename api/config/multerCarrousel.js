@@ -21,7 +21,7 @@ const uploadCarrousel = multer({
   // Ici seront renseigner les limits des fichiers (taile, proportion, ...)
   limits: {
     fileSize: 1 * 4098 * 4098,
-    files: 3
+    files: 5
   },
   // Ici nous avons un filtre qui va nous permetre de configurer les extensions accepter par notre middleware ou autre
   fileFilter: (req, file, cb) => {

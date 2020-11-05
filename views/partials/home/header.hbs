@@ -12,12 +12,10 @@
   </ol>
   <div class="carousel-inner">
 
-     {{#each carroussel }}
-     {{#each imageCarroussel}}
+     {{#each carroussel.image }}
       <div class="carousel-item {{ class }}">
-        <img class="d-block img-carrousel" src="{{ carrousel.imageCarroussel }}" alt="{{ name }}">
+        <img class="d-block img-carrousel" src="{{ path }}" alt="{{ name }}">
       </div>
-    {{/each}}
     {{/each}}
 
   </div>

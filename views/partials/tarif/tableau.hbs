@@ -74,48 +74,15 @@
         <div class=" text-end">
             <p>Vous avez déjà un compte ? <a class="honey" href="/log">Connectez-vous !</a></p>
         </div>
-        <form class="" action="..." id="..." class="..." method="post">
+        <form class="" action="/message" method="post">
             <section>
                 <input type="hidden" name="id_customer" value="">
-                <div class="" class="form-group row ">
-                    <label class="col-md-3 form-control-label">
-                        Titre
-                    </label>
-                    <div class="col-md-6 form-control-valign">
-                        <label class="radio-inline">
-                            <span class="custom-radio">
-                                <input name="id_gender" type="radio" value="1">
-                                <span></span>
-                            </span>
-
-                        </label>
-                        <label class="radio-inline">
-                            <span class="custom-radio">
-                                <input name="id_gender" type="radio" value="2">
-                                <span></span>
-                            </span>
-                            Mme
-                        </label>
-                    </div>
-                    <div class="col-md-3 form-control-comment">
-                    </div>
-                </div>
-                <div class="form-group row ">
-                    <label class="col-md-3 form-control-label required">
-                        Prénom
-                    </label>
-                    <div class="col-md-6">
-                        <input class="form-control" name="firstname" type="text" value="" required="">
-                    </div>
-                    <div class="col-md-3 form-control-comment">
-                    </div>
-                </div>
                 <div class="form-group row ">
                     <label class="col-md-3 form-control-label required">
                         Nom
                     </label>
                     <div class="col-md-6">
-                        <input class="form-control" name="lastname" type="text" value="" required="">
+                        <input class="form-control" name="name" type="text" value="" required="">
                     </div>
                     <div class="col-md-3 form-control-comment">
                     </div>
@@ -131,32 +98,27 @@
                     <div class="col-md-3 form-control-comment">
                     </div>
                 </div>
-
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label required">
+                        Sujet
+                    </label>
+                    <div class="col-md-6">
+                        <input class="form-control" name="sujet" type="text" value="" required="">
+                    </div>
+                    <div class="col-md-3 form-control-comment">
+                    </div>
+                </div>
                 <div class="form-group row ">
                     <label class="col-md-3 form-control-label">
                         Votre message
                     </label>
                     <div class="col-md-6">
-                        <textarea class="form-control" name="message" type="text" value="" placeholder=""></textarea>
+                        <textarea class="form-control" name="message" type="text" value="content"
+                            placeholder=""></textarea>
                     </div>
                 </div>
 
                 <!-- test /////////////////////-->
-
-                <div class="form-group row ">
-                    <label class="col-md-3 form-control-label">
-                        Date de naissance
-                    </label>
-                    <div class="col-md-6">
-                        <input class="form-control" name="birthday" type="text" value="" placeholder="DD/MM/YYYY">
-                        <span class="form-control-comment">
-                            (Ex. : 31/05/1970)
-                        </span>
-                    </div>
-                    <div class="col-md-3 form-control-comment">
-                        Optionnel
-                    </div>
-                </div>
                 <footer class="form-footer text-sm-center clearfix">
                     <input type="hidden" name="submitLogin" value="1">
                     <button class="btn black bg-gold mb-3 p-2 pl-5 pr-5" data-link-action="sign-in" type="submit"
@@ -164,9 +126,10 @@
                         Envoyer
                     </button>
                 </footer>
-
+            </section>
+        </form>
+    </section>
 </div>
-</section>
 
 <!-- FORM-contact fin -->
 {{!-- ===================================== --}}
@@ -206,35 +169,3 @@
 </div>
 
 
-<!-- modal -->
-<!-- Central Modal Medium Success -->
-<div class="modal fade" id="devis" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-notify modal-success" role="document">
-        <!--Content-->
-        <div class="modal-content">
-            <!--Header-->
-            <div class="modal-header bg-gold">
-                <p class="heading lead black">Message Envoyer</p>
-
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true" class="white-text">&times;</span>
-                </button>
-            </div>
-
-            <!--Body-->
-            <div class="modal-body">
-                <div class="text-center">
-                    <i class="fas fa-check fa-4x mb-3 animated rotateIn lawn"></i>
-                    <p class="black">Votre demande de devis a bien été enregistrer, nous nous éfforcerons d'y repondre
-                        dans les plus bref délais</p>
-                </div>
-            </div>
-
-            <!--Footer-->
-            <div class="modal-footer justify-content-center bg-gold"></div>
-
-
-        </div>
-        <!--/.Content-->
-    </div>
-</div>

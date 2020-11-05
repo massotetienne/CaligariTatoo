@@ -39,7 +39,7 @@ module.exports = {
         console.log(croquis)
 
 
-        fs.unlink('./public/' + croquis.image, (err) => {
+        fs.unlink('./public' + croquis.image, (err) => {
             if (err) console.log(err)
             console.log('Mon Image est supprimer !')
             // Method DeleteOne

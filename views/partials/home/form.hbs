@@ -1,183 +1,76 @@
-   <!-- ================================================================================================= -->
+<!-- ================================================================================================= -->
 
-    <!-- FORM-contact -->
+<!-- FORM-contact -->
 
-    <div id="contact" class="mb-10vh"></div>
+<div id="contact" class="mb-10vh"></div>
 
-    <div class="container bg-black">
-        <h2 class="container text-center  p-2 ft-45 mt-3">Contactez-moi</h2>
-    </div>
-    <div class="container bg-black mt-3">
-        <section class="register-form">
-            <div class=" text-end">
-                <p>Vous avez déjà un compte ? <a class="honey" href="/log">Connectez-vous !</a></p>
-            </div>
-            <form class="" action="..." id="..." class="..." method="post">
-                <section>
-                    <input type="hidden" name="id_customer" value="">
-                    <div class="" class="form-group row ">
-                        <label class="col-md-3 form-control-label">
-                            Titre
-                        </label>
-                        <div class="col-md-6 form-control-valign">
-                            <label class="radio-inline">
-                                <span class="custom-radio">
-                                    <input name="id_gender" type="radio" value="1">
-                                    <span></span>
-                                </span>
-                                M
-                            </label>
-                            <label class="radio-inline">
-                                <span class="custom-radio">
-                                    <input name="id_gender" type="radio" value="2">
-                                    <span></span>
-                                </span>
-                                Mme
-                            </label>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                    </div>
-                    <div class="form-group row ">
-                        <label class="col-md-3 form-control-label required">
-                            Prénom
-                        </label>
-                        <div class="col-md-6">
-                            <input class="form-control" name="firstname" type="text" value="" required="">
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                    </div>
-                    <div class="form-group row ">
-                        <label class="col-md-3 form-control-label required">
-                            Nom
-                        </label>
-                        <div class="col-md-6">
-                            <input class="form-control" name="lastname" type="text" value="" required="">
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                    </div>
-                    <div class="form-group row ">
-                        <label class="col-md-3 form-control-label required">
-                            E-mail
-                        </label>
-                        <div class="col-md-6">
-                            <input class="form-control" name="email" type="email" value="" required="">
-                        </div>
-
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                    </div>
-
-                    <div class="form-group row ">
-                        <label class="col-md-3 form-control-label">
-                            Votre message
-                        </label>
-                        <div class="col-md-6">
-                            <textarea class="form-control" name="message" type="text" value=""
-                                placeholder=""></textarea>
-                        </div>
-                    </div>
-
-                    <!-- test /////////////////////-->
-
-                    <div class="form-group row ">
-                        <label class="col-md-3 form-control-label">
-                            Date de naissance
-                        </label>
-                        <div class="col-md-6">
-                            <input class="form-control" name="birthday" type="text" value="" placeholder="DD/MM/YYYY">
-                            <span class="form-control-comment">
-                                (Ex. : 31/05/1970)
-                            </span>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                            Optionnel
-                        </div>
-                    </div>
-                    <div class="form-group row ">
-                        <label class="col-md-3 form-control-label">
-                        </label>
-                        <div class="col-md-6">
-                            <span class="custom-checkbox">
-                                <input name="newsletter" type="checkbox" value="1">
-                                <span><i class="material-icons checkbox-checked"></i></span>
-                                <label>Recevoir notre newsletter<br><em>Vous pouvez vous désinscrire à tout moment. Vous
-                                        trouverez pour cela nos informations de contact dans les conditions
-                                        d'utilisation du site.</em></label>
-                            </span>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                    </div>
-                    <div class="form-group row ">
-                        <label class="col-md-3 form-control-label required">
-                        </label>
-                        <div class="col-md-6">
-                            <span class="custom-checkbox">
-                                <input name="psgdpr" type="checkbox" value="1" required="">
-                                <span><i class="material-icons checkbox-checked"></i></span>
-                                <label>J'accepte les conditions générales et la politique de confidentialité</label>
-                            </span>
-                        </div>
-                        <div class="col-md-3 form-control-comment">
-                        </div>
-                    </div>
-                    <footer class="form-footer text-sm-center clearfix">
-                        <input type="hidden" name="submitLogin" value="1">
-                        <button class="btn black bg-gold mb-3 p-2 pl-5 pr-5" data-link-action="sign-in" type="submit"
-                            data-toggle="modal" data-target="#recu" href="#recu" rel="nofollow">
-                            Envoyer
-                        </button>
-                    </footer>
-            </form>
-    </div>
-    </section>
-    </div>
-
-    <!-- FORM-contact fin -->
-
-    <!-- ================================================================================================= -->
-
-    <!-- modal -->
-    <!-- Central Modal Medium Success -->
-    <div class="modal fade" id="recu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-notify modal-success" role="document">
-            <!--Content-->
-            <div class="modal-content">
-                <!--Header-->
-                <div class="modal-header bg-gold">
-                    <p class="heading lead black">Message Envoyer</p>
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="white-text">&times;</span>
-                    </button>
-                </div>
-
-                <!--Body-->
-                <div class="modal-body">
-                    <div class="text-center">
-                        <i class="fas fa-check fa-4x mb-3 animated rotateIn lawn"></i>
-                        <p class="black">Votre message est bien envoyer , merci de nous avoir contacter.</p>
-                    </div>
-                </div>
-
-                <!--Footer-->
-                <div class="modal-footer justify-content-center bg-gold"></div>
-
-
-            </div>
-            <!--/.Content-->
+<div class="container bg-black">
+    <h2 class="container text-center  p-2 ft-45 mt-3">Contactez-moi</h2>
+</div>
+<div class="container bg-black mt-3">
+    <section class="register-form">
+        <div class=" text-end">
+            <p>Vous avez déjà un compte ? <a class="honey" href="/log">Connectez-vous !</a></p>
         </div>
-    </div>
-    <!-- Central Modal Medium Success-->
+        <form class="" action="/message" method="post">
+            <section>
+                <input type="hidden" name="id_customer" value="">
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label required">
+                        Nom
+                    </label>
+                    <div class="col-md-6">
+                        <input class="form-control" name="name" type="text" value="" required="">
+                    </div>
+                    <div class="col-md-3 form-control-comment">
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label required">
+                        E-mail
+                    </label>
+                    <div class="col-md-6">
+                        <input class="form-control" name="email" type="email" value="" required="">
+                    </div>
 
-    <!-- Button trigger modal
-    <div class="text-center">
-        <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#centralModalSuccess">Launch
-            Modal Success <i class="far fa-eye ml-1"></i></a>
-    </div> -->
+                    <div class="col-md-3 form-control-comment">
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label required">
+                        Sujet
+                    </label>
+                    <div class="col-md-6">
+                        <input class="form-control" name="sujet" type="text" value="" required="">
+                    </div>
+                    <div class="col-md-3 form-control-comment">
+                    </div>
+                </div>
+                <div class="form-group row ">
+                    <label class="col-md-3 form-control-label">
+                        Votre message
+                    </label>
+                    <div class="col-md-6">
+                        <textarea class="form-control" name="message" type="text" value="content"
+                            placeholder=""></textarea>
+                    </div>
+                </div>
 
-    <!-- modal fin -->
-    <!-- ================================================================================================= -->
+                <!-- test /////////////////////-->
+                <footer class="form-footer text-sm-center clearfix">
+                    <input type="hidden" name="submitLogin" value="1">
+                    <button class="btn black bg-gold mb-3 p-2 pl-5 pr-5" data-link-action="sign-in" type="submit"
+                        data-toggle="modal" data-target="#contact" rel="nofollow">
+                        Envoyer
+                    </button>
+                </footer>
+            </section>
+        </form>
+    </section>
+</div>
+
+
+<!-- FORM-contact fin -->
+
+<!-- ================================================================================================= -->
+

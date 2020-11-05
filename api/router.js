@@ -3,8 +3,6 @@ const express = require('express'),
     router = express.Router(),
     path = require('path')
 
-    uploadAcceuil = require('./config/multerAcceuil')
-
 // Controller
 const homeController = require('./controllers/homeController'),
     actusController = require('./controllers/actusController'),
@@ -17,7 +15,9 @@ const homeController = require('./controllers/homeController'),
     adminController = require('./controllers/adminController'),
     UserCreateController = require('./controllers/UserCreateController'),
     UserLogin = require ('./controllers/UserLogin'),
-    Carroussel = require ('./controllers/Carroussel')
+    Carroussel = require ('./controllers/Carroussel'),
+    nodemailerController = require('./controllers/NodeMailerController')
+
     // UserAuthSucess = require ('../middleware/UserAuthSucess')
 // ==========================================================
 // ======Middleware=====
@@ -46,7 +46,7 @@ router.route("/user/Logout")
 //==== Actus ====
 const upload = require('./config/multer')
 const uploadCarroussel = require('./config/multerCarrousel')
-const TestCarousel = require('./controllers/TestCarousel')
+
 
 
 
@@ -114,12 +114,42 @@ router.route("/croquis/update/:id")
 router.route("/carroussel/get")
     .get(Carroussel.get)
 router.route("/carroussel/post")
-    .post(uploadAcceuil.array('imageCarroussel', 6),TestCarousel.postArrayAcceuil)
+    .post(uploadCarroussel.array('imageCarroussel'),Carroussel.post)
 router.route("/carroussel/delete/:id")
     .get(Carroussel.deleteOne)
-router.route("/carroussel/update/:id")
-    .put(uploadAcceuil.array('imageCarroussel', 6), TestCarousel.putArrayAcceuil)
 
+router.route('/carroussel/edit/:id')
+  .put(uploadCarroussel.array('image'), Carroussel.put)
+
+
+// =====================================================
+
+// ===== Nodemailer =====
+// email test
+
+router.route('/message/get')
+    .get(nodemailerController.get)
+
+router.route('/nodemailerTest')
+    .post(nodemailerController.test)
+
+// email de verification
+// router.route('/verification')
+//     .post(nodemailerController.sendVerif)
+
+// // Page de vérification
+// router.route('/verify/:id')
+//     .get(nodemailerController.verifMail)
+
+// =====================================================
+const messageController = require ('./controllers/messageController')
+//===== Message =====
+router.route('/message/get')
+    .get(messageController.get)
+router.route('/message')
+    .post(messageController.post)
+router.route('/message/delete/:id')
+    .get(messageController.deleteOne)
 // =====================================================
 
 // Home

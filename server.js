@@ -15,9 +15,11 @@ const
     fileupload = require ('express-fileupload'),
     expressSession = require('express-session'),
     MongoStore = require('connect-mongo'),
-    multer = require ('multer')
+    multer = require ('multer'),
+    methodOverride = require('method-override'),
     port = process.env.PORT || 3000;
-    
+
+
 const{ stripTags, limit,last,limitChar,limitCharacter } = require('./helper/hbs');
 
 
@@ -27,8 +29,11 @@ const{ stripTags, limit,last,limitChar,limitCharacter } = require('./helper/hbs'
 // ==== dotenv ===== (crypter les clé etc...)
 require('dotenv').config()
 
-// console.log(process.env.MONGO_URI)
+// Method Overrride
+app.use(methodOverride('_method'))
 
+
+// console.log(process.env.MONGO_URI)
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,

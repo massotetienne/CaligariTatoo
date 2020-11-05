@@ -29,6 +29,7 @@
                                         class="fas fa-plus ft-25" data-toggle="tooltip" data-placement="bottom"
                                         title="Ajouter/Crée"></i>
                                 </a></th>
+                                 {{> admin/CrudEve/modalEvent}}
                         </tr>
                     </thead>
                     <tbody>
@@ -39,14 +40,15 @@
                             <td>{{title}}</td>
                             <td>Posté</td>
                             <td class="text-right">
-                                <button type="button" class="btn bg-gold btn-sm m-0 py-1 m-2 ">Preview</button>
+                                <button type="button" class="btn bg-gold btn-sm m-0 py-1 m-2 "data-toggle="modal"
+                                    data-target="#viewEvent{{_id}}">Preview</button>
                                 <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
                                     data-target="#modalUpdEvent{{_id}}">Edit</button>
                                 <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
                                     data-target="#confirmModalEvent{{_id}}">supprimer</button>
                             </td>
                         </tr>
-                        
+                       {{> admin/CrudEve/viewEvent }}
                       {{> admin/CrudEve/modalUpdEvent }}
                       {{/each}}
 

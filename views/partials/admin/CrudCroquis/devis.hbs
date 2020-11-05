@@ -30,6 +30,7 @@
                                     <i class="fas fa-plus ft-25" data-toggle="tooltip" data-placement="bottom"
                                         title="Ajouter/Crée"></i>
                                 </a></th>
+                                {{> admin/CrudCroquis/modalCroquis}}
                         </tr>
                     </thead>
                     <tbody>
@@ -39,15 +40,16 @@
                             <td>Croquis</td>
                             <td>#</td>
                             <td class="text-right">
-                                <button type="button" class="btn bg-gold btn-sm m-0 py-1 m-2">Envoyer</button>
+                                <button type="button" class="btn bg-gold btn-sm m-0 py-1 m-2"data-toggle="modal"
+                                    data-target="#viewCroquis{{_id}}">Preview</button>
                                 <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
                                     data-target="#modalUpdCroquis{{_id}}">Edit</button>
                                 <button type="button" class="btn bg-honey btn-sm m-0 py-1 m-2" data-toggle="modal"
                                     data-target="#modalConfirmCroquis{{_id}}">supprimer</button>
                             </td>
                         </tr>
+                        {{> admin/CrudCroquis/viewCroquis }}
                         {{> admin/CrudCroquis/modalUpdCroquis }}
-
                         {{/each}}
 
                     </tbody>
